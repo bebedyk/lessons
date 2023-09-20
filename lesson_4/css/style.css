@@ -1,0 +1,97 @@
+@import url("reset.css");
+
+div li {
+	color: red;
+}
+
+div ol li {
+	color: blue;
+}
+
+div ol li+li {
+	color: green;
+}
+
+div ol li+li+li {
+	color: rgb(235, 89, 235);
+}
+
+/* стилі для main */
+h1 {
+	color: red;
+}
+
+.content-1 p {
+	color: rgb(125, 37, 206);
+}
+
+div mark {
+	color: rgb(255, 0, 0);
+}
+
+h2 {
+	color: brown;
+}
+
+.main-text-1,
+.main-title-1 p {
+	color: green;
+}
+
+.main-text-2,
+.main-title-2 p {
+	color: rgb(196, 8, 8);
+}
+
+.main-text-3,
+.main-title-3 p {
+	color: blue;
+}
+
+.main-text-4,
+.main-title-4 p {
+	color: rgb(237, 146, 19);
+}
+
+/* стилі для footer */
+[class*="-nav"] {
+	color: blue;
+}
+
+.main-text-5 h3 {
+	color: rgb(235, 13, 13);
+}
+
+.main-text-5 p {
+	color: rgb(141, 55, 132);
+}
+
+.main-text-5 span {
+	color: rgb(255, 0, 0);
+}
+
+/* Експеременти. Вкладеність не така й проста як оказалась на практиці;-)я як Доктор Стрендж перший раз в паралельному ,,измерении" */
+
+.tab ul li ol>li {
+	color: black;
+}
+
+.tab ul li ol>li+li+li {
+	color: rgb(249, 3, 3);
+}
+
+.tab li~li {
+	color: rgb(27, 199, 64);
+}
+
+.experiment-1 .level-1 {
+	color: rgb(255, 196, 0);
+}
+
+.experiment-2~* {
+	color: rgb(183, 194, 36);
+}
+
+footer a span {
+	color: brown;
+}
