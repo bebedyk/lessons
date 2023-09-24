@@ -1,0 +1,136 @@
+@import url(/fonts/fonts.css);
+@import url(reset.css);
+
+.logo {
+	letter-spacing: 7px;
+	font-weight: 600;
+	font-family: poppins;
+	text-indent: 20px;
+	color: rgb(186, 125, 90);
+	font-size: 30px;
+	text-shadow: 2px 2px 4px #d08282;
+}
+
+.header-top p+p {
+
+	text-align: right;
+	color: rgba(238, 55, 14, 0.81);
+	font-size: 25px;
+	word-spacing: 25px;
+}
+
+/*-----------------------------MAIN STYLE---------------------------*/
+h1 {
+	font-family: poppins;
+	color: rgb(160, 116, 61);
+	text-shadow: 3px 3px 4px #d08282;
+	font-size: 40px;
+}
+
+.main-title h1,
+.main-title p {
+	line-height: 1.2;
+}
+
+.main-title p {
+	font-family: causten;
+	font-size: 22px;
+	color: rgb(233, 136, 61);
+
+}
+
+.main-content p {
+	word-spacing: 100px;
+	color: rgb(160, 116, 61);
+	text-indent: 16px;
+}
+
+.price {
+	font-family: causten;
+	text-decoration: line-through rgba(6, 2, 1, 0.381);
+	color: rgb(104, 95, 95);
+	font-size: 20px;
+}
+
+.main-content-1 p {
+	word-spacing: 95px;
+	color: rgb(160, 116, 61);
+	text-indent: 15px;
+}
+
+.price-1 {
+	font-size: 19px;
+	font-family: causten;
+	color: #e72020;
+	text-decoration: underline rgb(113, 17, 216);
+}
+
+h2 {
+	font-family: poppins;
+	color: rgb(160, 116, 61);
+	text-shadow: 2px 2px 3px #d08282;
+	font-size: 35px;
+	line-height: 1.2;
+}
+
+.main-title-2 p {
+	font-family: causten;
+	font-size: 20px;
+	color: rgb(233, 136, 61);
+	font-size: 23px;
+	line-height: 1.5;
+}
+
+.text p {
+	white-space: nowrap;
+	color: rgb(160, 116, 61);
+	font-family: poppins;
+	font-size: 20px;
+	line-height: 1.4;
+}
+
+.text p+p {
+	text-transform: capitalize;
+	font-style: italic;
+	text-align: center;
+	text-decoration: underline;
+	color: #e72020;
+}
+
+/* ---------------------footer-------------------------- */
+.footer {
+	text-align: center;
+	word-spacing: 150px;
+	line-height: 1.7;
+}
+
+.footer p {
+	font-style: oblique;
+	color: #e7204f;
+}
+
+.footer p~p {
+	font-family: causten;
+	font-size: 20px;
+	color: #5e3f13;
+}
+
+.footer p+p+p {
+	text-indent: 35px;
+}
+
+.footer p+p+p+p {
+	text-indent: -41px;
+}
+
+footer a {
+	text-transform: uppercase;
+	text-shadow: 2px 2px 5px #051c31, 5px -2px 10px red;
+	font-size: 20px;
+	color: red;
+}
+
+main * {
+	text-align: center;
+	/*знаю ну не здержався*/
+}
