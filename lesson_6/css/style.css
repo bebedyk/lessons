@@ -1,0 +1,149 @@
+@import url(../fonts/fonts.css);
+@import url(reset.css);
+
+
+.block {
+	max-width: 692px;
+	margin-left: 50px;
+}
+
+.photo {
+	margin: 150px 0px 37px;
+}
+
+h1 {
+	min-height: 86px;
+	font-size: 30px;
+	font-family: "Poppins";
+	color: #37393f;
+	font-weight: 600;
+	line-height: 127%;
+
+}
+
+.block p {
+	line-height: 146%;
+	margin-bottom: 42px;
+}
+
+h2 {
+	color: #6b77e5;
+	margin-bottom: 12px;
+	font-size: 20px;
+	font-weight: 600;
+	line-height: 127%;
+}
+
+.photo-bott {
+	margin-right: 29px;
+}
+
+.content {
+	display: inline-block;
+	max-width: 325px;
+}
+
+.content span {
+	color: #3c3f37;
+	font-family: "Poppins";
+	font-size: 25px;
+	font-weight: 600;
+	line-height: 1.3;
+}
+
+.content p {
+	margin-top: 15px;
+	line-height: 1.3;
+	color: #40DDB6;
+	font-size: 20px;
+	font-weight: 600;
+}
+
+li {
+	margin: 0px 0px 30px 27px;
+}
+
+/*--------------------------block-2----------------------------- */
+
+.block-2 {
+	font-size: 0;
+	max-width: 1600px;
+}
+
+.content-2 {
+	display: inline-block;
+	max-width: 584px;
+	vertical-align: top;
+}
+
+.content-2 h3 {
+	margin: 21px 0px 13px 0px;
+	font-size: 28px;
+	color: #D06B00;
+}
+
+.content-2 h4 {
+	margin-bottom: 25px;
+	font-family: "DM Serif Text", serif;
+	/* оце не пойму в підключеннях serif показує що так треба підключати а як його нема нічого й не міняється*/
+	font-size: 59px;
+	font-weight: 400;
+	line-height: 86px;
+	color: #0E333D;
+}
+
+.content-2.text {
+	margin: 0px 38px 0px 100px;
+}
+
+.content-2 p {
+	max-width: 563px;
+	font-size: 20px;
+	line-height: 36px;
+	color: #474747;
+}
+
+.foto-2 {
+	margin-right: 22px;
+}
+
+/*padding не знайшов підходящого місця де можна би було використати */
+
+/*----------------------------трохи експерементів з падінгом------------------------*/
+footer {
+	max-width: 1600px;
+}
+
+.item {
+	margin: 50px 50px;
+	display: inline-block;
+	max-width: 300px;
+	max-height: 300px;
+}
+
+.item.left {
+	background: #40DDB6;
+	padding: 25px 25px 0px 50px;
+}
+
+.item.left h5 {
+	margin-bottom: 20px;
+
+}
+
+.item.mid {
+	background-color:
+		#e5d36b;
+	overflow: auto;
+	padding: 20px;
+}
+
+.item.mid p {
+	margin-bottom: 20px;
+
+}
+
+.item.right a {
+	background-color: #D06B00;
+	padding: 20px;
+}
