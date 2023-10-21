@@ -1,0 +1,385 @@
+@import url("../fonts/font.css");
+@import url("reset.css");
+
+body {
+	background: rgb(177, 177, 172);
+}
+
+.header {
+	margin: 0 auto;
+	max-width: 100%;
+	height: 120px;
+	background: rgba(201, 202, 196, 0.845);
+	border-bottom: 1px solid rgb(25, 11, 181);
+	margin-bottom: 100px;
+}
+
+.main {
+	max-width: 1920px;
+	margin: 0 auto;
+}
+
+nav {
+	max-width: 1920px;
+	margin: 0 auto;
+}
+
+ul li {
+	display: inline-block;
+}
+
+ul li>ul li {
+	font-size: 0;
+	display: block;
+	margin: 0;
+	display: none;
+}
+
+ul li:hover>ul li {
+	display: block;
+}
+
+ul li ul li>ul {
+	font-size: 0;
+	display: inline-block;
+	display: none;
+}
+
+ul li ul li:hover>ul {
+	margin-left: 2px;
+	display: inline-block;
+}
+
+a {
+	border-radius: 20% 10% 20% 10% / 20% 10% 20% 10%;
+	box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.4);
+	font-size: 20px;
+	color: rgb(27, 104, 211);
+	background: rgba(196, 218, 227, 0.789);
+	padding: 5px;
+	outline: 2px solid rgb(145, 111, 232);
+	display: inline-block;
+}
+
+
+a:hover {
+	box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.4);
+	color: rgb(15, 83, 179);
+	background: rgba(148, 201, 222, 0.844);
+	padding: 5px 5px 5px 15px;
+	outline: 2px solid rgb(38, 96, 177);
+	display: inline-block;
+	transition: all 0.3s ease 0s;
+	font-weight: 600;
+}
+
+.block.info {
+	padding: 5px;
+	margin-top: 10px;
+	border: 1px solid black;
+	border-bottom: none;
+	overflow: auto;
+	max-height: 110px;
+
+}
+
+.block {
+
+	margin-top: 50px;
+	width: 320px;
+	vertical-align: top;
+	display: inline-block;
+}
+
+.boss {
+	display: inline-block;
+	display: none;
+}
+
+.boss:target {
+	display: initial;
+}
+
+
+
+
+.block.van {
+	margin-left: 150px;
+}
+
+/*----------------------------------pianino---------------------------------------*/
+
+main {
+	max-width: 1920px;
+	margin: 0 auto;
+}
+
+.off {
+
+	display: none;
+}
+
+.off:target {
+	display: initial;
+}
+
+.info-2 {
+	display: inline-block;
+	margin: 0 auto;
+	padding: 0px 100px;
+	text-align: center;
+}
+
+.info-2 h2 {
+	font-family: "Cormorant Infant";
+	border-bottom: 2px solid rgb(131, 61, 61);
+	font-size: 40px;
+	font-weight: 700;
+	color: black;
+}
+
+
+.info-2 p {
+	font-size: 22px;
+	color: rgb(36, 25, 37);
+}
+
+.info-3 p {
+	padding-left: 40px;
+	word-spacing: 90px;
+	font-family: "Cormorant Infant";
+	font-size: 30px;
+	color: rgb(7, 117, 234);
+}
+
+.info-2 span {
+	font-family: "Cormorant Infant";
+	font-size: 30px;
+	color: rgb(7, 117, 234);
+
+}
+
+.item {
+	margin: 0 auto;
+	border: 1px solid burlywood;
+	display: inline-block;
+	width: 75px;
+	height: 250px;
+	background-color: rgb(213, 220, 225);
+	border-bottom: none;
+	box-shadow: 3px 8px 3px 0px rgba(0, 0, 0, 0.4);
+}
+
+.item-boss {
+
+	margin: 0 auto;
+	font-size: 0px;
+}
+
+.item:nth-child(3n + 2) {
+	background: black;
+	background: rgb(0, 0, 0);
+	background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(134, 134, 134, 1) 92%, rgba(150, 150, 150, 1) 99%);
+	border: 4px solid rgb(110, 104, 104);
+	border-top: none;
+}
+
+:active.item:nth-child(3n + 2) {
+	border: 6px solid rgb(102, 95, 95);
+	border-top: none;
+}
+
+
+.item-bottom {
+	margin-bottom: 30px;
+	border: 1px solid burlywood;
+	display: inline-block;
+	width: 112.5px;
+	height: 240px;
+	background-color: rgb(213, 220, 225);
+	border-top: none;
+	box-shadow: 3px 8px 3px 0px rgba(0, 0, 0, 0.4);
+
+}
+
+.item-bottom:active {
+
+	border: 1px solid rgb(165, 135, 95);
+	display: inline-block;
+	width: 112.5px;
+	height: 240px;
+	background-color: rgb(213, 220, 225);
+	border-top: none;
+	box-shadow: 3px 5px 3px 0px rgba(0, 0, 0, 0.4);
+}
+
+.menu-main li {
+	margin-left: 100px;
+	margin-bottom: 100px;
+}
+
+.menu-main ol li {
+	display: none;
+}
+
+.menu-main:hover ol li {
+	display: initial;
+}
+
+/*---------------------------------------------game------------------------------------*/
+
+.box {
+	font-size: 0;
+	margin: 0 auto;
+	width: 1000px;
+	height: 1000px;
+	background: rgba(222, 184, 135, 0.433);
+	visibility: hidden;
+}
+
+.box:target {
+	visibility: visible;
+}
+
+.box-1 {
+
+	display: inline-block;
+	width: 70px;
+	height: 40px;
+	background: rgb(0, 0, 0);
+}
+
+.box-2 {
+	padding: 0px 25px;
+	color: rgb(108, 21, 129);
+	font-size: 16px;
+	display: inline-block;
+	max-width: 400px;
+	min-height: 250px;
+	background: url(../img/gloomy-cat.png) 0 10% / cover no-repeat;
+	visibility: hidden;
+}
+
+.box-1:hover+.box-2,
+:hover.box-2 {
+	visibility: visible;
+}
+
+
+.box-3 {
+	margin-left: 100px;
+	width: 50px;
+	height: 70px;
+	background: black;
+	visibility: hidden;
+}
+
+.box-2:hover+.box-3,
+:hover.box-3 {
+	visibility: visible;
+}
+
+.box-4 {
+	margin-left: 100px;
+	width: 750px;
+	height: 50px;
+	background: black;
+	visibility: hidden;
+}
+
+.box-3:hover+.box-4,
+:hover.box-4 {
+	visibility: visible;
+}
+
+.box-5 {
+	margin-left: 800px;
+	width: 50px;
+	height: 200px;
+	background: black;
+	visibility: hidden;
+}
+
+.box-4:hover+.box-5,
+:hover.box-5 {
+	visibility: visible;
+}
+
+.box-6 {
+	margin-left: 100px;
+	width: 750px;
+	height: 50px;
+	background: black;
+	visibility: hidden;
+}
+
+.box-5:hover+.box-6,
+:hover.box-6 {
+	visibility: visible;
+}
+
+.box-7 {
+	margin-left: 100px;
+	width: 50px;
+	height: 50px;
+	background: black;
+	visibility: hidden;
+}
+
+.box-6:hover+.box-7,
+:hover.box-7 {
+	visibility: visible;
+}
+
+.box-8 {
+
+	font-weight: 600;
+	color: rgb(9, 232, 252);
+	font-size: 16px;
+	display: inline-block;
+	width: 300px;
+	height: 250px;
+	background: url(../img/smile_cat.png) center / cover no-repeat;
+	visibility: hidden;
+
+}
+
+.box-7:hover+.box-8,
+:hover.box-8 {
+	visibility: visible;
+}
+
+.box-9 {
+	margin-left: 200px;
+	display: inline-block;
+	width: 300px;
+	height: 50px;
+	background: rgb(0, 0, 0);
+	visibility: hidden;
+}
+
+.box-9 a:focus {
+	outline: 5px solid red;
+}
+
+.box-9 a {
+	padding: 0;
+	outline: none;
+	box-shadow: none;
+	display: block;
+	content: "";
+	width: 300px;
+	height: 50px;
+	background: rgb(0, 0, 0);
+}
+
+.box-8:hover+.box-9,
+:hover.box-9 {
+	visibility: visible;
+}
+
+.box-8 p {
+	text-align: center;
+	line-height: 1.1;
+	color: rgb(255, 255, 255);
+}
