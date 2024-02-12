@@ -1,0 +1,58 @@
+$backgcolor: rgba(211, 211, 211, 0.756);
+
+.header {
+    // .header__sub-list
+
+    &__sub-list {
+      padding-top: toEm(35);
+        position: absolute;
+        top: 0;
+        left: -180%;
+        display: none;
+        z-index: 12;
+      
+        }
+
+   // .header__forms
+
+    &__forms {
+    background: rgba(116, 126, 127, 0.721);
+        padding: 20px 10px;
+        display: flex;
+        flex-direction: column;
+        gap: toEm(25);
+        border-radius: 10px;
+      
+    }
+}
+.forms {
+    // .forms__form
+
+    &__form {
+        input {
+            padding: 0px 5px;
+            height: toEm(40);
+            border-radius: 6px;
+        }
+    }
+
+    // .forms__button
+
+    &__button {
+        text-align: center;
+    }
+
+    // .forms__link-button
+
+    &__link-button {
+        border-radius: 8px;
+        padding: 8px 24px;
+        border: 1px solid rgb(65, 61, 61);
+        background: rgb(16, 168, 179);
+        &:hover {
+            background: rgb(86, 186, 193);
+        }
+    }
+}
+.forms-code {
+}
