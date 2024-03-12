@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<head>
+		<title>Qeeb</title>
+		<meta charset="UTF-8">
+		<meta name="format-detection" content="telephone=no">
+		<!-- <style>body{opacity: 0;}</style> -->
+		<link rel="stylesheet" href="css/style.min.css?_v=20240312232405">
+		<link rel="shortcut icon" href="favicon.ico">
+		<!-- <meta name="robots" content="noindex, nofollow"> -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+</head>
+
+<body>
+	<div class="wrapper ">
+		<header class="header">
+			<div class="header__container">
+				<div class="header__menu menu">
+					<div class="menu__logo">
+						<a class="menu__link-logo" href="">
+							<picture><source srcset="img/Logo.webp" type="image/webp"><img class="menu__img" src="img/Logo.png" alt="Image"></picture>
+						</a>
+					</div>
+					<button type="button" class="menu__icon icon-menu"><span></span></button>
+					<nav class="menu__body">
+						<ul class="menu__list">
+							<li class="menu__item"><a data-goto="#popcategor" href="" class="menu__link">Explore</a></li>
+							<li class="menu__item"><a data-goto="#top-collection" href="" class="menu__link">Collections</a></li>
+							<li class="menu__item"><a data-goto="#tranding-nfts" href="" class="menu__link">Creators</a></li>
+							<li class="menu__item"><a data-goto="#blog" href="" class="menu__link">Blog</a></li>
+						</ul>
+					</nav>
+					<a data-da=".menu__list,991,98" class="menu__link-Wallet" target="_blank" href="home1.html">Connect Wallet</a>
+				</div>
+			</div>
+		</header>
+		<main class="wallet">
+			<form action="/purchase_nft" method="post">
+				<label for="wallet_address">Your Gamanian address:</label>
+				<input type="text" id="wallet_address" name="wallet_address" required>
+
+				<label for="nft_id">ID NFT:</label>
+				<input type="text" id="nft_id" name="nft_id" required>
+
+				<label for="quantity">Quantity:</label>
+				<input type="number" id="quantity" name="quantity" required>
+
+				<button type="submit">
+					Buy NFTs</button>
+			</form>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+
+				<div class="footer__top top-footer">
+					<img class="top-footer__logo" src="img/logo.svg" alt="Image">
+					<div class="top-footer__lists">
+						<div data-spollers="991.98" class="top-footer__spoller">
+							<details class="top-footer__item-spoller ">
+								<summary data-spoller-close class="top-footer__title">
+									Quick Links
+								</summary>
+								<ul class="top-footer__list">
+									<li class="top-footer__item">
+										<a href="#" class="top-footer__link">
+											About us
+										</a>
+									</li>
+									<li class="top-footer__item">
+										<a href="#" class="top-footer__link">
+											Services
+										</a>
+									</li>
+									<li class="top-footer__item">
+										<a href="#" class="top-footer__link">
+											API
+										</a>
+									</li>
+									<li class="top-footer__item">
+										<a href="#" class="top-footer__link">
+											Become a Partner
+										</a>
+									</li>
+									<li class="top-footer__item">
+										<a href="#" class="top-footer__link">
+											Branding
+										</a>
+									</li>
+									<li class="top-footer__item">
+										<a href="#" class="top-footer__link">
+											Career
+										</a>
+									</li>
+								</ul>
+							</details>
+						</div>
+						<div data-spollers="991.98" class="top-footer__spoller">
+							<details class="top-footer__item-spoller ">
+								<summary data-spoller-close class="top-footer__title">
+									Marketplace
+								</summary>
+								<ul class="top-footer__list">
+									<li class="top-footer__item">
+										<a href="#" class="top-footer__link">
+											Explore
+										</a>
+									</li>
+									<li class="top-footer__item">
+										<a href="#" class="top-footer__link">
+											How it works
+										</a>
+									</li>
+									<li class="top-footer__item">
+										<a href="#" class="top-footer__link">
+											Insights
+										</a>
+									</li>
+									<li class="top-footer__item">
+										<a href="#" class="top-footer__link">
+											Help Center
+										</a>
+									</li>
+
+								</ul>
+							</details>
+						</div>
+					</div>
+					<form class="top-footer__form" action="files/sendmail/sendmail.php" method="POST">
+						<div class="top-footer__wrapper-form">
+							<div class="top-footer__input-wrapper">
+								<label class="top-footer__label" for="mail">
+									Sign Up to Receive Updates Services
+								</label>
+								<input data-required data-validate id="mail" type="text" name="form[email]" data-error="Error" placeholder="youremail@gmail.com" class="top-footer__input input">
+							</div>
+							<button type="submit" class="top-footer__button _icon-send-mail"></button>
+						</div>
+					</form>
+				</div>
+				<div class="footer__bottom bottom-footer">
+					<address class="bottom-footer__address address">
+						<ul class="address__list">
+							<li class="address__title">Office</li>
+							<li class="address__item">
+								<a href="https://www.google.com/maps/search/545,+Street+11,+Block+F+California,+U.S.A/@36.7949747,-129.9073074,5z/data=!3m1!4b1?entry=ttu" class="address__link">
+									545, Street 11, Block F California, U.S.A
+								</a>
+							</li>
+						</ul>
+						<ul class="address__list">
+							<li class="address__title">Contact</li>
+							<li class="address__item">
+								<a href="tel:+923023003215" class="address__link">
+									+92 302 300 3215
+								</a>
+							</li>
+							<li class="address__item">
+								<a href="mailto:ouraddress@email.com" class="address__link">
+									ouraddress@email.com
+								</a>
+							</li>
+						</ul>
+					</address>
+					<div class="bottom-footer__copy">
+						Qeeb 2022. All Rights Reserved
+					</div>
+					<div class="bottom-footer__copy">
+						Terms & Conditions Privacy
+					</div>
+					<div class="bottom-footer__social social">
+						<a href="#" aria-label="twitter" target="_blank" class="social__link _icon-s-tw"></a>
+						<a href="#" aria-label="facebook" target="_blank" class="social__link _icon-s-fb"></a>
+						<a href="#" aria-label="instagramm" target="_blank" class="social__link _icon-s-inst"></a>
+						<a href="#" aria-label="linkedin" target="_blank" class="social__link _icon-s-ldn"></a>
+						<a href="#" aria-label="tiktok" target="_blank" class="social__link _icon-s-tktk"></a>
+						<a href="#" aria-label="youtube" target="_blank" class="social__link _icon-s-youtube"></a>
+						<a href="#" aria-label="dribbble" target="_blank" class="social__link _icon-s-ball"></a>
+					</div>
+				</div>
+				<button class="top" data-goto="#main-hero" type="button"></button>
+			</div>
+		</footer>
+	</div>
+
+	<script src="js/app.min.js?_v=20240312232405"></script>
+
+</body>
+
+</html>
