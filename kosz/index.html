@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>HomePage</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20240320160557">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+			</div>
+		</header>
+		<main class="page">
+			<div class="page__container">
+				<div class="cart__icon">
+					<button class="fas fa-shopping-cart"></button>
+				</div>
+				<div class="cart-body product-box">
+
+					<div class="product-box product">
+						<picture><source srcset="img/test.webp" type="image/webp"><img class="product__image" src="img/test.png" alt="" /></picture>
+						<h2 class="product__title">ADICOLOR SEASONAL</h2>
+						<span class="product__price">29.99zl</span>
+						<button class="product__button bx bx-shopping-bag add-cart">do kosza</button>
+					</div>
+					<div class="product-box product ggg">
+						<picture><source srcset="img/test.webp" type="image/webp"><img class="product__image" src="img/test.png" alt="" /></picture>
+						<h2 class="product__title">ADICOLOR SEASONAL1</h2>
+						<span class="product__price">29.95zl</span>
+						<button class="product__button bx bx-shopping-bag add-cart">do kosza</button>
+					</div>
+					<div class="product-box product ggg">
+						<picture><source srcset="img/test.webp" type="image/webp"><img class="product__image" src="img/test.png" alt="" /></picture>
+						<h2 class="product__title">ADICOLOR SEASONAL2</h2>
+						<span class="product__price">26.95zl</span>
+						<button class="product__button bx bx-shopping-bag add-cart">do kosza</button>
+					</div>
+					<div class="product-box product ggg">
+						<picture><source srcset="img/test.webp" type="image/webp"><img class="product__image" src="img/test.png" alt="" /></picture>
+						<h2 class="product__title">ADICOLOR SEASONAL3</h2>
+						<span class="product__price">9.95zl</span>
+						<button class="product__button bx bx-shopping-bag add-cart">do kosza</button>
+					</div>
+					<div class="product-box product ggg">
+						<picture><source srcset="img/test.webp" type="image/webp"><img class="product__image" src="img/test.png" alt="" /></picture>
+						<h2 class="product__title">ADICOLOR SEASONAL4</h2>
+						<span class="product__price">17.95zl</span>
+						<button class="product__button bx bx-shopping-bag add-cart">do kosza</button>
+					</div>
+					<div class="product-box product ggg">
+						<picture><source srcset="img/test.webp" type="image/webp"><img class="product__image" src="img/test.png" alt="" /></picture>
+						<h2 class="product__title">ADICOLOR SEASONAL5</h2>
+						<span class="product__price">12.95zl</span>
+						<button class="product__button bx bx-shopping-bag add-cart">do kosza</button>
+					</div>
+				</div>
+				<!--------------------- кошик ---------------------->
+				<div class="cart">
+
+					<h2 class="cart__title">Twój koszyk</h2>
+					<div class="cart__items">
+						<!-- Тут будуть відображатися товари у кошику -->
+					</div>
+					<div class="cart__total">
+						<span>Total:</span>
+						<span class="cart__total-price">$0.00</span>
+					</div>
+					<button class="cart__checkout-btn">Checkout</button>
+					<!-- Модальне вікно для вибору способу оплати -->
+					<div id="paymentModal" class="modal">
+						<div class="modal-content">
+							<h2 class="modal-content__title"> Metoda płatności</h2>
+							<form class="payment-form" id="paymentForm">
+								<div class="payment-methods">
+									<div class="payment-methods__item">
+										<input class="payment-methods__radio " type="radio" id="visa-mastercard" name="paymentMethod" value="visa-mastercard">
+										<label class="payment-methods__label payment-methods__label--visa" for="visa-mastercard">Visa/MasterCard</label>
+									</div>
+									<div class="payment-methods__item">
+										<input class="payment-methods__radio" type="radio" id="google-pay" name="paymentMethod" value="google-pay">
+										<label class="payment-methods__label" for="google-pay">Google Pay</label>
+									</div>
+									<div id="cardDetails" style="display: none;">
+										<label class="payment-methods__title" for="cardNumber">Numer karty:</label>
+										<input class="payment-methods__input" type="text" id="cardNumber" name="cardNumber" placeholder="np. 1234 5678 9000 0012" required>
+
+										<label class="payment-methods__title" for="expiryDate">Ważna do</label>
+										<input class="payment-methods__input" type="text" id="expiryDate" name="expiryDate" placeholder="MM/RR" required>
+
+										<label class="payment-methods__title" for="cvv">Kod CVV/CVC:</label>
+										<input class="payment-methods__input" type="text" id="cvv" name="cvv" placeholder="np. 344" required>
+									</div>
+									<button type="submit" class="btn  payment-methods__button">Użyj karty </button>
+
+								</div>
+
+							</form>
+							<button id="toggleAddressForm" class="btn">Dodaj Adres</button>
+							<form id="checkoutForm">
+								<input class="checkoutForm__info" type="text" name="firstName" placeholder="First Name" required>
+								<input class="checkoutForm__info" type="text" name="lastName" placeholder="Last Name" required>
+								<input class="checkoutForm__info" type="text" name="address" placeholder="Address" required>
+								<input class="checkoutForm__info" type="text" name="apartment" placeholder="Apartment (optional)">
+								<input class="checkoutForm__info" type="text" name="postalCode" placeholder="Postal Code" required>
+								<input class="checkoutForm__info" type="text" name="city" placeholder="City" required>
+								<input class="checkoutForm__info" type="tel" name="phoneNumber" placeholder="Phone Number" required>
+								<button class="checkoutForm__button" type="submit">Zapisz dane</button>
+							</form>
+							<div id="delivery-address" class="delivery" style="display: none;">
+								<h3>Адреса доставки:</h3>
+								<p id="delivery-address-info" class="delivery__text"></p>
+								<button id="edit-address-button" class="delivery__button">Редагувати</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+
+			</div>
+
+		</main>
+
+		<footer class="footer">
+			<div class="footer__container">
+
+				sdfdsсммсмсмсмсмсммfdsf
+			</div>
+		</footer>
+	</div>
+	<script src="js/app.min.js?_v=20240320160557"></script>
+
+</body>
+
+</html>
