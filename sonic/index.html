@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Sonic</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20240413215437">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<div class="header__menu menu">
+					<div class="menu__logo">
+						<a class="menu__logo-link" href="index.html">
+							<picture><source srcset="img/menu-logo.webp" type="image/webp"><img class="menu__img" src="img/menu-logo.png" alt="Image"></picture>
+						</a>
+					</div>
+					<button type="button" class="menu__icon icon-menu"><span></span></button>
+					<nav class="menu__body">
+						<ul class="menu__list">
+							<li class="menu__item">
+								<a href="about.html" class="menu__link">About</a>
+							</li>
+							<li class="menu__item">
+								<a class="menu__link menu__link--arrow " href="shippers.html">Shippers</a>
+								<ul class="menu__sub-list">
+									<li class="menu__sub-item">
+										<a class="menu__sub-link" href="">Service</a>
+									</li>
+									<li class="menu__sub-item">
+										<a class="menu__sub-link" href="">Menu</a>
+									</li>
+									<li class="menu__sub-item">
+										<a class="menu__sub-link" href="">
+											Flotilla</a>
+									</li>
+									<li class="menu__sub-item">
+										<a class="menu__sub-link" href="">Countries</a>
+									</li>
+								</ul>
+							</li>
+							<li class="menu__item">
+								<a href="carriers.html" class="menu__link menu__link--arrow">Carriers</a>
+								<ul class="menu__sub-list">
+									<li class="menu__sub-item">
+										<a class="menu__sub-link" href="">Blog</a>
+									</li>
+									<li class="menu__sub-item">
+										<a class="menu__sub-link" href="">Info</a>
+									</li>
+									<li class="menu__sub-item">
+										<a class="menu__sub-link" href="">
+											World</a>
+									</li>
+									<li class="menu__sub-item">
+										<a class="menu__sub-link" href="">Cards</a>
+									</li>
+								</ul>
+							</li>
+							<li class="menu__item">
+								<a href="contact.html" class="menu__link">Contact</a>
+							</li>
+						</ul>
+					</nav>
+					<div data-da=".menu__list,460 " class="menu__box-login box-link">
+						<a data-popup="#popup-login" class="box-link__button" href="#"> <span class="transition"></span>
+							<span class="gradient"></span>
+							<span class="label">Log in</span></a>
+
+						<a data-popup="#popup-get" class="box-link__button  box-link__button--mod" href=""><span class="transition1"></span>
+							<span class="gradient1"></span>
+							<span class="label1">Get a quote</span></a>
+					</div>
+				</div>
+			</div>
+		</header>
+		<div id="popup" aria-hidden="true" class="popup">
+			<div class="popup__wrapper">
+				<div class="popup__content">
+					<button data-close type="button" class="popup__close"></button>
+					<div class="popup__text">
+						<form action="files/sendmail/sendmail.php" method="POST">
+							<div class="block-help">
+								<h3 class="block-help__title title-h3">describe your problem</h3>
+								<input type="text" name="form[email]" data-error="Error" placeholder="field for E-mail" class="input" required>
+								<button type="submit" class="button button-mail">Send</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+
+		<div id="popup-login" aria-hidden="true" class="popup">
+			<div class="popup__wrapper popup__wrapper--style">
+				<div class="popup__content popup__content--style">
+					<button data-close type="button" class="popup__close"></button>
+					<div class="popup__text popup__text--style ">
+						<form id="login-form" class="form login-form">
+							<h2 class="form-title">Login</h2>
+							<div class="form-group">
+								<label for="login-username" class="form-label">Username</label>
+								<input type="text" id="login-username" name="login-username" class="form-input" required>
+							</div>
+							<div class="form-group">
+								<label for="login-password" class="form-label">Password</label>
+								<div class="password-wrapper">
+									<input type="password" id="login-password" name="login-password" class="form-input password-input" required>
+									<button type="button" class="password-toggle-btn" aria-label="Toggle password visibility">
+										<i class="far fa-eye"></i>
+									</button>
+								</div>
+							</div>
+							<button type="submit" class="form-btn">Login</button>
+						</form>
+						<form id="register-form" class="form register-form">
+							<h2 class="form-title">Register</h2>
+							<div class="form-group">
+								<label for="register-username" class="form-label">Username</label>
+								<input type="text" id="register-username" name="register-username" class="form-input" required>
+							</div>
+							<div class="form-group">
+								<label for="register-email" class="form-label">Email</label>
+								<input type="email" id="register-email" name="register-email" class="form-input" required>
+							</div>
+							<div class="form-group">
+								<label for="register-password" class="form-label">Password</label>
+								<div class="password-wrapper">
+									<input type="password" id="register-password" name="register-password" class="form-input password-input" required>
+									<button type="button" class="password-toggle-btn" aria-label="Toggle password visibility">
+										<i class="far fa-eye"></i>
+									</button>
+								</div>
+							</div>
+							<button type="submit" class="form-btn">Register</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<div id="popup-get" aria-hidden="true" class="popup popup--get">
+			<div class="popup__wrapper popup__wrapper--get ">
+				<div class="popup__content popup__content--get">
+					<button data-close type="button" class="popup__close popup__close--get "></button>
+					<div class="popup__text popup__text--get ">
+						<form class="quote-form">
+							<div class="quote-form__group">
+								<label for="name" class="quote-form__label">Username:</label>
+								<input type="text" id="name" name="name" class="quote-form__input" required>
+							</div>
+							<div class="quote-form__group">
+								<label for="email" class="quote-form__label">Email:</label>
+								<input type="email" id="email" name="email" class="quote-form__input" required>
+							</div>
+							<div class="quote-form__group">
+								<label for="phone-get" class="quote-form__label">Phone number:</label>
+								<input type="tel" id="phone-get" name="phone" class="quote-form__input" required>
+							</div>
+							<div class="quote-form__group">
+								<label for="cargo-details" class="quote-form__label">Cargo details:</label>
+								<textarea id="cargo-details" name="cargo-details" class="quote-form__input quote-form__textarea" required></textarea>
+							</div>
+							<button type="submit" class="quote-form__btn btn btn--primary">
+								get an offer</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+
+
+
+
+
+
+		<div id="popup-ship" aria-hidden="true" class="popup popup-ship">
+			<div class="popup__wrapper popup__wrapper--ship">
+				<div class="popup__content  popup__content--ship">
+					<button data-close type="button" class="popup__close "></button>
+					<div class="popup__text popup__text--ship ">
+						<div class="container">
+							<h1 class="container__title">Order Shipping</h1>
+							<form id="shipping-form" class="container__form">
+								<div class="form-group">
+									<label for="name-ship" class="form-group__label">Full Name:</label>
+									<input type="text" id="name-ship" name="name" class="form-group__input" required>
+								</div>
+								<div class="form-group">
+									<label for="email-ship" class="form-group__label">Email:</label>
+									<input type="email" id="email-ship" name="email" class="form-group__input" required>
+								</div>
+								<div class="form-group">
+									<label for="phone-ship" class="form-group__label">Phone Number:</label>
+									<input type="tel" id="phone-ship" name="phone" class="form-group__input" required>
+								</div>
+								<div class="form-group">
+									<label for="cargo" class="form-group__label">Cargo Description:</label>
+									<textarea id="cargo" name="cargo" class="form-group__textarea" rows="4" required></textarea>
+								</div>
+								<div class="form-group">
+									<label for="weight" class="form-group__label">Weight (kg):</label>
+									<input type="number" id="weight" name="weight" class="form-group__input" min="0" step="0.1" required>
+								</div>
+								<div class="form-group">
+									<label for="size" class="form-group__label">Size (cm):</label>
+									<input type="text" id="size" name="size" class="form-group__input" required>
+								</div>
+								<div class="form-group">
+									<label for="type" class="form-group__label">Type of Cargo:</label>
+									<select id="type" name="type" class="form-group__select" required>
+										<option value="fragile">Fragile</option>
+										<option value="liquid">Liquid</option>
+										<option value="hazardous">Hazardous</option>
+										<option value="other">Other</option>
+									</select>
+								</div>
+								<div class="form-group">
+									<label for="delivery-cost" class="form-group__label">Estimated Delivery Cost:</label>
+									<input type="text" id="delivery-cost" name="delivery-cost" class="form-group__input" readonly>
+								</div>
+								<button type="submit" class="container__submit-btn">Submit Order</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<main class="page">
+			<div class="page__container">
+				<div class="page__block block" id="main-top" data-watch="navigator">
+					<div class="block__box block__box--info ">
+						<div data-watch-threshold="0.1" data-watch-once data-watch class="block__wrap-link block__wrap-link--translate ">
+							<span class=" block__info-span "> hWe’re expanding! </span>
+							<a class="block__link block__link--arrow" href="">Join our carrier network</a>
+						</div>
+						<h2 data-watch-threshold="0.1" data-watch-once data-watch class="block__title block__title--translate title">Breaking Barriers, Keeping Promises</h2>
+						<p data-watch-threshold="0.1" data-watch-once data-watch class="block__text block__text--translate text">Connecting your business to the roads ahead. Connecting your
+							business to the roads ahead.</p>
+						<div data-watch-threshold="0.1" data-watch-once data-watch class="box-link box-link--translate ">
+							<a data-popup="#popup-ship" class="box-link__button box-link__button--icon" href="#"> <span class="transition"></span>
+								<span class="gradient"></span>
+								<span class="label">Ship with us</span></a>
+							<a class="box-link__button  box-link__button--mod" href=""><span class="transition1"></span>
+								<span class="gradient1"></span>
+								<span class="label1">Haul with us</span></a>
+						</div>
+					</div>
+					<div class="block__box   block__box--image">
+
+						<picture><source srcset="img/car-page1.webp" type="image/webp"><img class="block__image " src="img/car-page1.png" alt="Image"></picture>
+
+					</div>
+				</div>
+			</div>
+
+			<section class="with with--margin">
+				<div class="with__container">
+
+
+
+					<div class="with__box" id="box">
+						<a class="with__img" href="">
+							<picture><source srcset="img/Fictional.webp" type="image/webp"><img class="with__image" src="img/Fictional.png" alt="Image"></picture>
+						</a>
+						<a class="with__img" href="">
+							<picture><source srcset="img/Fictional1.webp" type="image/webp"><img class="with__image" src="img/Fictional1.png" alt="Image"></picture>
+						</a>
+						<a class="with__img" href="">
+							<picture><source srcset="img/Fictional2.webp" type="image/webp"><img class="with__image" src="img/Fictional2.png" alt="Image"></picture>
+						</a>
+						<a class="with__img" href="">
+							<picture><source srcset="img/Fictional3.webp" type="image/webp"><img class="with__image" src="img/Fictional3.png" alt="Image"></picture>
+						</a>
+						<a class="with__img" href="">
+							<picture><source srcset="img/Fictional4.webp" type="image/webp"><img class="with__image" src="img/Fictional4.png" alt="Image"></picture>
+						</a>
+						<a class="with__img" href="">
+							<picture><source srcset="img/Fictional5.webp" type="image/webp"><img class="with__image" src="img/Fictional5.png" alt="Image"></picture>
+						</a>
+
+					</div>
+					<div class="with__box1 ">
+						<a class="with__img" href="">
+							<picture><source srcset="img/Fictional.webp" type="image/webp"><img class="with__image" src="img/Fictional.png" alt="Image"></picture>
+						</a>
+						<a class="with__img" href="">
+							<picture><source srcset="img/Fictional1.webp" type="image/webp"><img class="with__image" src="img/Fictional1.png" alt="Image"></picture>
+						</a>
+						<a class="with__img" href="">
+							<picture><source srcset="img/Fictional2.webp" type="image/webp"><img class="with__image" src="img/Fictional2.png" alt="Image"></picture>
+						</a>
+						<a class="with__img" href="">
+							<picture><source srcset="img/Fictional3.webp" type="image/webp"><img class="with__image" src="img/Fictional3.png" alt="Image"></picture>
+						</a>
+						<a class="with__img" href="">
+							<picture><source srcset="img/Fictional4.webp" type="image/webp"><img class="with__image" src="img/Fictional4.png" alt="Image"></picture>
+						</a>
+						<a class="with__img" href="">
+							<picture><source srcset="img/Fictional5.webp" type="image/webp"><img class="with__image" src="img/Fictional5.png" alt="Image"></picture>
+						</a>
+
+					</div>
+
+				</div>
+			</section>
+
+			<section class="barrier barrier--margin">
+				<div class="barrier__container">
+					<div class="barrier__block">
+						<div data-watch-threshold="0.2" data-watch-once data-watch class="barrier__box-title barrier__box-title--translate  ">
+							<div class="barrier__label">Our Strategy</div>
+							<h3 class="barrier__title title-h3">Barrier Breaking Solutions</h3>
+							<p class="barrier__text">Customized logistics and transportation solutions designed to
+								optimize your supply chain. Committed to reliability and efficiency, we're the trusted
+								partner for businesses nationwide.</p>
+						</div>
+						<div class="barrier__box ">
+							<div class="box-midle">
+								<div class="box-midle__content">
+									<div data-watch-threshold="0.2" data-watch-once data-watch class="box-midle__item box-midle__item--translate">
+										<div class="box-midle__wrap-link wrap-link ">
+											<div class="anime">
+												<div class="parent">
+													<div class="child child-1">S
+														<button class="buttons btn-1">
+															<picture><source srcset="img/box.webp" type="image/webp"><img src="img/box.png" alt="Image"></picture>
+														</button>
+													</div>
+													<div class="child child-2">M
+														<button class="buttons btn-2">
+															<picture><source srcset="img/box.webp" type="image/webp"><img src="img/box.png" alt="Image"></picture>
+														</button>
+													</div>
+													<div class="child child-3">L
+														<button class="buttons btn-3">
+															<picture><source srcset="img/box.webp" type="image/webp"><img src="img/box.png" alt="Image"></picture>
+														</button>
+													</div>
+													<div class="child child-4">XL
+														<button class="buttons btn-4">
+															<picture><source srcset="img/box.webp" type="image/webp"><img src="img/box.png" alt="Image"></picture>
+														</button>
+													</div>
+												</div>
+											</div>
+											<picture><source srcset="img/Featured-icon.webp" type="image/webp"><img class="box-midle__image" src="img/Featured-icon.png" alt="Image"></picture>
+										</div>
+										<h5 class="box-midle__title title-h5">Drayage </h5>
+										<p class="box-midle__text">Moving containers over short distances,
+											connecting ports with rail or truck terminals to ensure smooth
+											transitions in the shipping process. </p>
+										<a class="box-midle__link" href="">Learn more</a>
+									</div>
+									<div data-watch-threshold="0.2" data-watch-once data-watch class="box-midle__item box-midle__item--translate">
+
+										<div class="box-midle__wrap-link wrap-link">
+											<div class="anime">
+												<div class="parent">
+													<div class="child child-1">S
+														<button class="buttons btn-1">
+															<picture><source srcset="img/car-bar.webp" type="image/webp"><img src="img/car-bar.png" alt="Image"></picture>
+														</button>
+													</div>
+													<div class="child child-2">M
+														<button class="buttons btn-2">
+															<picture><source srcset="img/car-bar.webp" type="image/webp"><img src="img/car-bar.png" alt="Image"></picture>
+														</button>
+													</div>
+													<div class="child child-3">L
+														<button class="buttons btn-3">
+															<picture><source srcset="img/car-bar.webp" type="image/webp"><img src="img/car-bar.png" alt="Image"></picture>
+														</button>
+													</div>
+													<div class="child child-4">XL
+														<button class="buttons btn-4">
+															<picture><source srcset="img/car-bar.webp" type="image/webp"><img src="img/car-bar.png" alt="Image"></picture>
+														</button>
+													</div>
+												</div>
+											</div>
+											<picture><source srcset="img/Featured-icon1.webp" type="image/webp"><img class="box-midle__image" src="img/Featured-icon1.png" alt="Image"></picture>
+										</div>
+										<h5 class="box-midle__title title-h5">FTL Shipping (Full Truckload)</h5>
+										<p class="box-midle__text">Perfect for larger, bulk shipments that fill a truck,
+											or when you need a truck dedicated to your goods for privacy or speed.</p>
+										<a class="box-midle__link" href="">Learn more</a>
+									</div>
+									<div data-watch-threshold="0.2" data-watch-once data-watch class="box-midle__item box-midle__item--translate">
+										<div class="box-midle__wrap-link wrap-link">
+											<div class="anime">
+												<div class="parent">
+													<div class="child child-1">S
+														<button class="buttons btn-1">
+															<picture><source srcset="img/box.webp" type="image/webp"><img src="img/box.png" alt="Image"></picture>
+														</button>
+													</div>
+													<div class="child child-2">M
+														<button class="buttons btn-2">
+															<picture><source srcset="img/box.webp" type="image/webp"><img src="img/box.png" alt="Image"></picture>
+														</button>
+													</div>
+													<div class="child child-3">L
+														<button class="buttons btn-3">
+															<picture><source srcset="img/box.webp" type="image/webp"><img src="img/box.png" alt="Image"></picture>
+														</button>
+													</div>
+													<div class="child child-4">XL
+														<button class="buttons btn-4">
+															<picture><source srcset="img/box.webp" type="image/webp"><img src="img/box.png" alt="Image"></picture>
+														</button>
+													</div>
+												</div>
+											</div>
+											<picture><source srcset="img/Featured-icon2.webp" type="image/webp"><img class="box-midle__image" src="img/Featured-icon2.png" alt="Image"></picture>
+										</div>
+										<h5 class="box-midle__title title-h5">LTL Shipping (Less Than Truckload)</h5>
+										<p class="box-midle__text">Ideal for smaller shipments, LTL allows you to save
+											by sharing trailer space, making it a cost-effective choice for not filling
+											a full truck.</p>
+										<a class="box-midle__link" href="">Learn more</a>
+									</div>
+									<div data-watch-threshold="0.2" data-watch-once data-watch class="box-midle__item box-midle__item--translate">
+										<div class="box-midle__wrap-link wrap-link">
+											<div class="anime">
+												<div class="parent">
+													<div class="child child-1">S
+														<button class="buttons btn-1">
+															<picture><source srcset="img/box.webp" type="image/webp"><img src="img/box.png" alt="Image"></picture>
+														</button>
+													</div>
+													<div class="child child-2">M
+														<button class="buttons btn-2">
+															<picture><source srcset="img/box.webp" type="image/webp"><img src="img/box.png" alt="Image"></picture>
+														</button>
+													</div>
+													<div class="child child-3">L
+														<button class="buttons btn-3">
+															<picture><source srcset="img/box.webp" type="image/webp"><img src="img/box.png" alt="Image"></picture>
+														</button>
+													</div>
+													<div class="child child-4">XL
+														<button class="buttons btn-4">
+															<picture><source srcset="img/box.webp" type="image/webp"><img src="img/box.png" alt="Image"></picture>
+														</button>
+													</div>
+												</div>
+											</div>
+											<picture><source srcset="img/Featured-icon3.webp" type="image/webp"><img class="box-midle__image" src="img/Featured-icon3.png" alt="Image"></picture>
+										</div>
+										<h5 class="box-midle__title title-h5">Expedited Shipping</h5>
+										<p class="box-midle__text">When time is of the essence, expedited shipping
+											ensures your shipments arrive swiftly and on schedule.</p>
+										<a class="box-midle__link" href="">Learn more</a>
+									</div>
+									<div data-watch-threshold="0.2" data-watch-once data-watch class="box-midle__item box-midle__item--translate">
+										<div class="box-midle__wrap-link wrap-link">
+											<div class="anime">
+												<div class="parent">
+													<div class="child child-1">S
+														<button class="buttons btn-1">
+															<picture><source srcset="img/box.webp" type="image/webp"><img src="img/box.png" alt="Image"></picture>
+														</button>
+													</div>
+													<div class="child child-2">M
+														<button class="buttons btn-2">
+															<picture><source srcset="img/box.webp" type="image/webp"><img src="img/box.png" alt="Image"></picture>
+														</button>
+													</div>
+													<div class="child child-3">L
+														<button class="buttons btn-3">
+															<picture><source srcset="img/box.webp" type="image/webp"><img src="img/box.png" alt="Image"></picture>
+														</button>
+													</div>
+													<div class="child child-4">XL
+														<button class="buttons btn-4">
+															<picture><source srcset="img/box.webp" type="image/webp"><img src="img/box.png" alt="Image"></picture>
+														</button>
+													</div>
+												</div>
+											</div>
+											<picture><source srcset="img/Featured-icon4.webp" type="image/webp"><img class="box-midle__image" src="img/Featured-icon4.png" alt="Image"></picture>
+										</div>
+										<h5 class="box-midle__title title-h5">Warehousing and Distribution</h5>
+										<p class="box-midle__text">Beyond storage, we manage your inventory and take
+											care of order fulfillment, streamlining your supply chain.</p>
+										<a class="box-midle__link" href="">Learn more</a>
+									</div>
+									<div data-watch-threshold="0.2" data-watch-once data-watch class="box-midle__item box-midle__item--translate">
+										<div class="box-midle__wrap-link wrap-link">
+											<div class="anime">
+												<div class="parent">
+													<div class="child child-1">S
+														<button class="buttons btn-1">
+															<picture><source srcset="img/box.webp" type="image/webp"><img src="img/box.png" alt="Image"></picture>
+														</button>
+													</div>
+													<div class="child child-2">M
+														<button class="buttons btn-2">
+															<picture><source srcset="img/box.webp" type="image/webp"><img src="img/box.png" alt="Image"></picture>
+														</button>
+													</div>
+													<div class="child child-3">L
+														<button class="buttons btn-3">
+															<picture><source srcset="img/box.webp" type="image/webp"><img src="img/box.png" alt="Image"></picture>
+														</button>
+													</div>
+													<div class="child child-4">XL
+														<button class="buttons btn-4">
+															<picture><source srcset="img/box.webp" type="image/webp"><img src="img/box.png" alt="Image"></picture>
+														</button>
+													</div>
+												</div>
+											</div>
+											<picture><source srcset="img/Featured-icon5.webp" type="image/webp"><img class="box-midle__image" src="img/Featured-icon5.png" alt="Image"></picture>
+										</div>
+										<h5 class="box-midle__title title-h5">Cross-Docking</h5>
+										<p class="box-midle__text">Minimize handling and storage by directly
+											transferring shipments from incoming to outgoing vehicles, cutting costs and
+											saving time. </p>
+										<a class="box-midle__link" href="">Learn more</a>
+									</div>
+
+								</div>
+								<button type="button " class="show-more showmore"><span>Show
+										more</span><span>Hide</span></button>
+							</div>
+
+						</div>
+					</div>
+
+				</div>
+			</section>
+
+			<section class="promise promise--margin">
+				<div class="promise__container">
+					<div class="promise__block">
+						<div data-watch-threshold="0.2" data-watch-once data-watch class="promise__box-info promise__box-info--translate ">
+							<div class="promise__label label ">
+								Our Pledge
+							</div>
+							<h2 class="promise__title title-h3">Promise Keepers</h2>
+							<p class="promise__text">
+								Sonic Logistics isn’t just a logistics company; we're the team you count on for
+								hassle-free shipping across North America. Our easy online payments, real-time tracking,
+								and extensive warehousing network are designed to make your experience smooth and
+								reliable.
+							</p>
+							<p class="promise__text">
+								We work with a variety of clients, ensuring each one benefits from our dedicated
+								service. Our mission is to make shipping simple and keep our promises to you — with
+								every delivery, every time.
+							</p>
+							<div class="box-link box-link--mod ">
+								<a class="box-link__button " href=""> <span class="transition"></span>
+									<span class="gradient"></span>
+									<span class="label">Ship with us</span></a>
+								<a class="box-link__button  box-link__button--mod" href=""><span class="transition1"></span>
+									<span class="gradient1"></span>
+									<span class="label1">Haul with us</span></a>
+							</div>
+						</div>
+						<div data-watch-threshold="0.2" data-watch-once data-watch class="promise__box-image promise__box-image--translate">
+							<div class="promise__item">
+								<div class="promise__wrap">
+									<img class="promise__img promise__img--strart " src="img/Image.png" alt="Image">
+								</div>
+								<div class="promise__wrap">
+									<img class="promise__img promise__img--big" src="img/Image1.png" alt="Image">
+								</div>
+							</div>
+							<div class="promise__item-bottom">
+								<div class="promise__wrap">
+									<img class="promise__img promise__img--vertical " src="img/Image2.png" alt="Image">
+								</div>
+								<div class="promise__wrap">
+									<img class="promise__img promise__img--midle" src="img/Image3.png" alt="Image">
+								</div>
+								<div class="promise__wrap">
+									<img class="promise__img promise__img--vertical  promise__img--mod" src="img/Image4.png" alt="Image">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="logistics logistics--margin ">
+				<div class="logistics__container">
+					<div class="logistics__block ">
+						<div data-watch-threshold="0.2" data-watch-once data-watch class="logistics__box title-box logistics__box--translate ">
+							<div class="title-box__label label">Our Guarantee</div>
+							<div class="title-box__title title-h3">Logistic Precision</div>
+							<div class="title-box__text text">Every shipment is handled with care, ensuring your product
+								move smoothly and reach its destination safely.</div>
+						</div>
+						<div class="logistics__box-shippers box-shippers">
+							<div class="box-shippers__item box-shippers__item--shadow">
+								<picture><source srcset="img/locistic-icon1.webp" type="image/webp"><img class="box-shippers__img" src="img/locistic-icon1.png" alt="Image"></picture>
+								<h4 class="box-shippers__title title-h4">Shippers</h4>
+								<p class="box-shippers__text text"> Streamline your shipping operations with Sonic
+									Logistics. Our comprehensive solutions, tailored to your needs, ensure your goods
+									move efficiently and safely across the country or around the globe. With real-time
+									tracking and dedicated support, we make logistics seamless. Let us handle the
+									complexities of transportation while you focus on your business growth.</p>
+								<div class="box-link">
+									<a class="box-link__button" href=""> <span class="transition"></span>
+										<span class="gradient"></span>
+										<span class="label">Ship with us</span></a>
+									<a class="box-link__button  box-link__button--mod" href=""><span class="transition1"></span>
+										<span class="gradient1"></span>
+										<span class="label1">Haul with us</span></a>
+								</div>
+							</div>
+							<div class="box-shippers__item box-shippers__item--fon-r">
+								<picture><source srcset="img/logistic-image.webp" type="image/webp"><img class="box-shippers__image" src="img/logistic-image.png" alt="Image"></picture>
+							</div>
+						</div>
+						<div class="logistics__box-shippers box-shippers logistics__box-shippers--mod ">
+							<div class="box-shippers__item box-shippers__item--fon-l ">
+								<picture><source srcset="img/logistic-image.webp" type="image/webp"><img class="box-shippers__image" src="img/logistic-image.png" alt="Image"></picture>
+							</div>
+							<div class="box-shippers__item box-shippers__item--shadow">
+								<picture><source srcset="img/locistic-icon.webp" type="image/webp"><img class="box-shippers__img" src="img/locistic-icon.png" alt="Image"></picture>
+								<h4 class="box-shippers__title title-h4">Carriers</h4>
+								<p class="box-shippers__text text"> Streamline your shipping operations with Sonic
+									Logistics. Our comprehensive solutions, tailored to your needs, ensure your goods
+									move efficiently and safely across the country or around the globe. With real-time
+									tracking and dedicated support, we make logistics seamless. Let us handle the
+									complexities of transportation while you focus on your business growth.</p>
+								<div class="box-link">
+									<a class="box-link__button" href=""> <span class="transition"></span>
+										<span class="gradient"></span>
+										<span class="label">Ship with us</span></a>
+									<a class="box-link__button  box-link__button--mod" href=""><span class="transition1"></span>
+										<span class="gradient1"></span>
+										<span class="label1">Haul with us</span></a>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				<div class="footer__block">
+					<div class="footer__box-ready">
+						<div class="footer__item">
+							<h4 class="footer__title title-h4">Ready To Start Breaking Barriers?</h4>
+							<p class="footer__text text">Give us a call today and see how Sonic can move your business forward
+							</p>
+						</div>
+						<div class="box-link box-link--mod ">
+							<a class="box-link__button " href=""> <span class="transition"></span>
+								<span class="gradient"></span>
+								<span class="label">Ship with us</span></a>
+							<a class="box-link__button  box-link__button--mod" href=""><span class="transition1"></span>
+								<span class="gradient1"></span>
+								<span class="label1">Haul with us</span></a>
+						</div>
+					</div>
+					<div class="footer__box-sonic">
+						<div class="footer__icons">
+							<a href="">
+								<picture><source srcset="img/footer-icon1.webp" type="image/webp"><img class="footer__icon" src="img/footer-icon1.png" alt="Image"></picture>
+							</a>
+							<a href="">
+								<picture><source srcset="img/footer-icon.webp" type="image/webp"><img class="footer__icon" src="img/footer-icon.png" alt="Image"></picture>
+							</a>
+						</div>
+						<picture><source srcset="img/footer-logo.webp" type="image/webp"><img class="footer__logo" src="img/footer-logo.png" alt="Image"></picture>
+						<p class="footer__text">© 2077 Untitled UI. All rights reserved.</p>
+					</div>
+				</div>
+				<button class="top" data-goto="#main-top" type="button"></button>
+			</div>
+		</footer>
+	</div>
+	<!-- Документація: https://template.fls.guru/template-docs/modul-preloader.html -->
+	<div id="fls-preloader">
+		<!-- Скріпт прелоадера -->
+		<script>
+			function preloader() {
+				const preloaderImages = document.querySelector('[data-preloader]') ? document.querySelectorAll('[data-preloader] img') : document.querySelectorAll('img');
+				const preloaderContainer = document.querySelector('#fls-preloader');
+				if (preloaderImages.length) {
+					const preloaderStyleTemplate = `
+				<style>
+					* {
+						padding: 0px;
+						margin: 0px;
+						border: 0px;
+						box-sizing: border-box;
+					}
+					/* Головний блок */
+					.fls-preloader{
+						pointer-events: none;
+						z-index: -1;
+						position: fixed;
+						width: 100%;
+						height: 100%;
+						top: 0;
+						left: 0;
+						display: flex;
+						justify-content:center;
+						align-items: center;
+					}
+					/* Блок з елементами */
+					.fls-preloader__body{
+						padding: 0.93rem;
+						max-width: 31.25rem;
+						display: flex;
+						flex-direction: column;
+					}
+					/* Блок з лічильником */
+					.fls-preloader__counter{
+						font-size: 10rem;
+					}
+					/* Прогресбар */
+					.fls-preloader__line{}
+					/* Лінія прогресбару */
+					.fls-preloader__line span{
+						display: inline-block;
+						transition: width 0.2s ease;
+						height: 0.8rem;
+						background-color: #7A956B;
+					}
+					.lock body{
+						overflow: hidden;
+						touch-action: none;
+						overscroll-behavior: none;
+					}
+					.loading body>*:not(.fls-preloader){
+						opacity: 0;
+						visibility: hidden;
+					}
+					.loaded body>*:not(.fls-preloader){
+						transition: opacity 0.5s ease 0s;
+						opacity: 1;
+						visibility: visible;
+					}
+				</style>`;
+
+					document.head.insertAdjacentHTML("beforeend", preloaderStyleTemplate);
+
+					const preloaderTemplate = `
+					<div class="fls-preloader">
+						<div class="fls-preloader__body">
+							<div class="fls-preloader__counter">0%</div>
+							<div class="fls-preloader__line"><span></span></div>
+						</div>
+					</div>`;
+					document.body.insertAdjacentHTML("beforeend", preloaderTemplate);
+
+					const
+						preloader = document.querySelector('.fls-preloader'),
+						showPecentLoad = document.querySelector('.fls-preloader__counter'),
+						showLineLoad = document.querySelector('.fls-preloader__line span'),
+						htmlDocument = document.documentElement;
+
+					let imagesLoadedCount = counter = progress = 0;
+
+					htmlDocument.classList.add('loading');
+					htmlDocument.classList.add('lock');
+
+					preloaderImages.forEach(preloaderImage => {
+						const imgClone = document.createElement('img');
+						if (imgClone) {
+							imgClone.onload = imageLoaded;
+							imgClone.onerror = imageLoaded;
+							preloaderImage.dataset.src ? imgClone.src = preloaderImage.dataset.src : imgClone.src = preloaderImage.src;
+						}
+					});
+
+					function setValueProgress(progress) {
+						showPecentLoad ? showPecentLoad.innerText = `${progress}%` : null;
+						showLineLoad ? showLineLoad.style.width = `${progress}%` : null;
+					}
+					showPecentLoad ? setValueProgress(progress) : null;
+
+					function imageLoaded() {
+						imagesLoadedCount++;
+						progress = Math.round((100 / preloaderImages.length) * imagesLoadedCount);
+						const intervalId = setInterval(() => {
+							counter >= progress ? clearInterval(intervalId) : setValueProgress(++counter);
+							counter >= 100 ? addLoadedClass() : null;
+						}, 10);
+					}
+
+					function addLoadedClass() {
+						htmlDocument.classList.add('loaded');
+						htmlDocument.classList.remove('lock');
+						htmlDocument.classList.remove('loading');
+						setInterval(() => {
+							preloader.remove();
+							preloaderContainer.remove();
+						}, 500);
+					}
+				} else {
+					preloaderContainer.remove();
+				}
+			}
+			preloader();
+		</script>
+	</div>
+	<script src="js/app.min.js?_v=20240413215437"></script>
+</body>
+
+</html>
