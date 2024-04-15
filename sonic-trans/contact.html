@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.min.css?_v=20240415122919">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js?_v=20240415122919"></script>
+
+<head>
+	<title>contact</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20240415122919">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<div class="header__menu menu">
+					<div class="menu__logo">
+						<a class="menu__logo-link" href="index.html">
+							<picture><source srcset="img/menu-logo.webp" type="image/webp"><img class="menu__img" src="img/menu-logo.png" alt="Image"></picture>
+						</a>
+					</div>
+					<button type="button" class="menu__icon icon-menu"><span></span></button>
+					<nav class="menu__body">
+						<ul class="menu__list">
+							<li class="menu__item">
+								<a href="about.html" class="menu__link">About</a>
+							</li>
+							<li class="menu__item">
+								<a class="menu__link menu__link--arrow " href="shippers.html">Shippers</a>
+								<ul class="menu__sub-list">
+									<li class="menu__sub-item">
+										<a class="menu__sub-link" href="">Service</a>
+									</li>
+									<li class="menu__sub-item">
+										<a class="menu__sub-link" href="">Menu</a>
+									</li>
+									<li class="menu__sub-item">
+										<a class="menu__sub-link" href="">
+											Flotilla</a>
+									</li>
+									<li class="menu__sub-item">
+										<a class="menu__sub-link" href="">Countries</a>
+									</li>
+								</ul>
+							</li>
+							<li class="menu__item">
+								<a href="carriers.html" class="menu__link menu__link--arrow">Carriers</a>
+								<ul class="menu__sub-list">
+									<li class="menu__sub-item">
+										<a class="menu__sub-link" href="">Blog</a>
+									</li>
+									<li class="menu__sub-item">
+										<a class="menu__sub-link" href="">Info</a>
+									</li>
+									<li class="menu__sub-item">
+										<a class="menu__sub-link" href="">
+											World</a>
+									</li>
+									<li class="menu__sub-item">
+										<a class="menu__sub-link" href="">Cards</a>
+									</li>
+								</ul>
+							</li>
+							<li class="menu__item">
+								<a href="contact.html" class="menu__link">Contact</a>
+							</li>
+						</ul>
+					</nav>
+					<div data-da=".menu__list,460 " class="menu__box-login box-link">
+						<a data-popup="#popup-login" class="box-link__button" href="#"> <span class="transition"></span>
+							<span class="gradient"></span>
+							<span class="label">Log in</span></a>
+
+						<a data-popup="#popup-get" class="box-link__button  box-link__button--mod" href=""><span class="transition1"></span>
+							<span class="gradient1"></span>
+							<span class="label1">Get a quote</span></a>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main class="contact">
+			<section class="hero-contact">
+				<div class="hero-contact__container">
+					<div class="hero-contact__block">
+						<div class="sidebar">
+
+							<div class="sidebar__box">
+								<div class="sidebar__item-title">
+									<h4 class="sidebar__title title-h4">Let’s Start</h4>
+									<p class="sidebar__text text"> We’ love to hear from you. Give us a call and see how
+										we
+										can solve your logistical challenges.</p>
+								</div>
+								<div class="sidebar__item-help-email item-help-email">
+									<h4 class="item-help-email__title title-h4 ">Email us</h4>
+									<p class="item-help-email__text text">Let us know how we can help.</p>
+									<a href="#" data-popup="#popup" class="link item-help-email__mail">support@sonic-logistics.com</a>
+									<div id="popup" aria-hidden="true" class="popup">
+										<div class="popup__wrapper">
+											<div class="popup__content">
+												<button data-close type="button" class="popup__close"></button>
+												<div class="popup__text">
+													<form action="files/sendmail/sendmail.php" method="POST">
+														<div class="block-help">
+															<h3 class="block-help__title title-h3">describe your problem</h3>
+															<input type="text" name="form[email]" data-error="Error" placeholder="field for E-mail" class="input" required>
+															<button type="submit" class="button button-mail">Send</button>
+														</div>
+													</form>
+												</div>
+											</div>
+										</div>
+									</div>
+
+
+
+
+									<div id="popup-login" aria-hidden="true" class="popup">
+										<div class="popup__wrapper popup__wrapper--style">
+											<div class="popup__content popup__content--style">
+												<button data-close type="button" class="popup__close"></button>
+												<div class="popup__text popup__text--style ">
+													<form id="login-form" class="form login-form">
+														<h2 class="form-title">Login</h2>
+														<div class="form-group">
+															<label for="login-username" class="form-label">Username</label>
+															<input type="text" id="login-username" name="login-username" class="form-input" required>
+														</div>
+														<div class="form-group">
+															<label for="login-password" class="form-label">Password</label>
+															<div class="password-wrapper">
+																<input type="password" id="login-password" name="login-password" class="form-input password-input" required>
+																<button type="button" class="password-toggle-btn" aria-label="Toggle password visibility">
+																	<i class="far fa-eye"></i>
+																</button>
+															</div>
+														</div>
+														<button type="submit" class="form-btn">Login</button>
+													</form>
+													<form id="register-form" class="form register-form">
+														<h2 class="form-title">Register</h2>
+														<div class="form-group">
+															<label for="register-username" class="form-label">Username</label>
+															<input type="text" id="register-username" name="register-username" class="form-input" required>
+														</div>
+														<div class="form-group">
+															<label for="register-email" class="form-label">Email</label>
+															<input type="email" id="register-email" name="register-email" class="form-input" required>
+														</div>
+														<div class="form-group">
+															<label for="register-password" class="form-label">Password</label>
+															<div class="password-wrapper">
+																<input type="password" id="register-password" name="register-password" class="form-input password-input" required>
+																<button type="button" class="password-toggle-btn" aria-label="Toggle password visibility">
+																	<i class="far fa-eye"></i>
+																</button>
+															</div>
+														</div>
+														<button type="submit" class="form-btn">Register</button>
+													</form>
+												</div>
+											</div>
+										</div>
+									</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+									<div id="popup-get" aria-hidden="true" class="popup popup--get">
+										<div class="popup__wrapper popup__wrapper--get ">
+											<div class="popup__content popup__content--get">
+												<button data-close type="button" class="popup__close popup__close--get "></button>
+												<div class="popup__text popup__text--get ">
+													<form class="quote-form">
+														<div class="quote-form__group">
+															<label for="name" class="quote-form__label">Username:</label>
+															<input type="text" id="name" name="name" class="quote-form__input" required>
+														</div>
+														<div class="quote-form__group">
+															<label for="email" class="quote-form__label">Email:</label>
+															<input type="email" id="email" name="email" class="quote-form__input" required>
+														</div>
+														<div class="quote-form__group">
+															<label for="phone-get" class="quote-form__label">Phone number:</label>
+															<input type="tel" id="phone-get" name="phone" class="quote-form__input" required>
+														</div>
+														<div class="quote-form__group">
+															<label for="cargo-details" class="quote-form__label">Cargo details:</label>
+															<textarea id="cargo-details" name="cargo-details" class="quote-form__input quote-form__textarea" required></textarea>
+														</div>
+														<button type="submit" class="quote-form__btn btn btn--primary">
+															get an offer</button>
+													</form>
+												</div>
+											</div>
+										</div>
+									</div>
+
+
+
+
+
+
+
+
+
+
+
+									<div id="popup-ship" aria-hidden="true" class="popup popup-ship">
+										<div class="popup__wrapper popup__wrapper--ship">
+											<div class="popup__content  popup__content--ship">
+												<button data-close type="button" class="popup__close "></button>
+												<div class="popup__text popup__text--ship ">
+													<div class="container">
+														<h1 class="container__title">Order Shipping</h1>
+														<form id="shipping-form" class="container__form">
+															<div class="form-group">
+																<label for="name-ship" class="form-group__label">Full Name:</label>
+																<input type="text" id="name-ship" name="name" class="form-group__input" required>
+															</div>
+															<div class="form-group">
+																<label for="email-ship" class="form-group__label">Email:</label>
+																<input type="email" id="email-ship" name="email" class="form-group__input" required>
+															</div>
+															<div class="form-group">
+																<label for="phone-ship" class="form-group__label">Phone Number:</label>
+																<input type="tel" id="phone-ship" name="phone" class="form-group__input" required>
+															</div>
+															<div class="form-group">
+																<label for="cargo" class="form-group__label">Cargo Description:</label>
+																<textarea id="cargo" name="cargo" class="form-group__textarea" rows="4" required></textarea>
+															</div>
+															<div class="form-group">
+																<label for="weight" class="form-group__label">Weight (kg):</label>
+																<input type="number" id="weight" name="weight" class="form-group__input" min="0" step="0.1" required>
+															</div>
+															<div class="form-group">
+																<label for="size" class="form-group__label">Size (cm):</label>
+																<input type="text" id="size" name="size" class="form-group__input" required>
+															</div>
+															<div class="form-group">
+																<label for="type" class="form-group__label">Type of Cargo:</label>
+																<select id="type" name="type" class="form-group__select" required>
+																	<option value="fragile">Fragile</option>
+																	<option value="liquid">Liquid</option>
+																	<option value="hazardous">Hazardous</option>
+																	<option value="other">Other</option>
+																</select>
+															</div>
+															<div class="form-group">
+																<label for="delivery-cost" class="form-group__label">Estimated Delivery Cost:</label>
+																<input type="text" id="delivery-cost" name="delivery-cost" class="form-group__input" readonly>
+															</div>
+															<button type="submit" class="container__submit-btn">Submit Order</button>
+														</form>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="sidebar__item-help-phone item-help-phone">
+									<h4 class="item-help-phone__title title-h4 ">Call Us</h4>
+									<p class="item-help-phone__text text">Available 24 hours a day, 7 days a week.</p>
+									<a class="item-help-phone__tel" href="tel:(469) 545-4687">(469) 545-4687</a>
+
+								</div>
+							</div>
+						</div>
+						<div class="box-form">
+							<div class="box-form__item">
+								<h3 class="box-form__title title-h3">Get a Quote</h3>
+								<p class="box-form_text text">Or give us a call. We’re available 24/7.</p>
+							</div>
+							<form class="form-get" action="#" enctype="multipart/form-data" method="post">
+								<div class="form-get__wrap-name">
+									<div class="form-get__name">
+										<label for="First-Name">First Name*</label>
+										<input id="First-Name" type="text" name="First-Name" placeholder="First Name" required>
+									</div>
+									<div class="form-get__name">
+										<label for="Last-Name">Last Name*</label>
+										<input id="Last-Name" type="text" name="Last-Name" placeholder="Last Name" required>
+									</div>
+								</div>
+								<div class="form-get__form">
+									<label for="mail">Email*</label>
+									<input id="mail" name="mail" placeholder="you@company.com" type="email" required>
+
+									<label for="phone">Phone number</label>
+									<input id="phone" name="phone" type="tel" placeholder="+1 (555) 000-0000" required>
+
+								</div>
+
+								<div class="form-get__Message">
+									<label class="form-get__margin" for="message">message</label>
+									<textarea id="message" name="message" autocomplete="off" placeholder="Leave us a message..."></textarea>
+								</div>
+								<h5 class="form-get__sub-title">Services</h5>
+								<div class="form-get__check-box check-box ">
+
+									<div class="check-box__block">
+										<div class="check-box__item">
+											<input class="check-box__label" id="Website-design" type="checkbox" name="Website-design">
+											<label for="Website-design">Website design</label>
+										</div>
+										<div class="check-box__item">
+											<input class="check-box__label" id="UX-design" type="checkbox" name="UX-design">
+											<label for="UX-design">UX design</label>
+										</div>
+										<div class="check-box__item">
+											<input class="check-box__label" id="User-research" type="checkbox" name="User-research">
+											<label for="User-research">User research</label>
+										</div>
+									</div>
+
+									<div class="check-box__block">
+										<div class="check-box__item">
+											<input class="check-box__label" id="Content-creation" type="checkbox" name="Content-creation">
+											<label for="Content-creation">Content
+												creation</label>
+										</div>
+										<div class="check-box__item">
+
+											<input class="check-box__label" id="Strategy-consulting" type="checkbox" name="Strategy-consulting">
+											<label for="Strategy-consulting">Strategy &
+												consulting</label>
+										</div>
+										<div class="check-box__item">
+											<input class="check-box__label" id="Other" type="checkbox" name="Other">
+											<label for="Other">Other</label>
+										</div>
+									</div>
+								</div>
+
+								<button type="submit" class=" button-get button-mail">Get started</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+
+	</div>
+	<script src="js/files/sonic.js?_v=20240415122919"></script>
+	<script src="js/app.min.js?_v=20240415122919"></script>
+
+</body>
+
+</html>
