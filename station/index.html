@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>HomePage</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20240524145244">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+			</div>
+		</header>
+		<main>
+			<div class="instr">
+				<span>Інструкція:</span>
+				<div>
+					<span>1)беремо пістолет</span>
+					<img src="img/van.webp" alt="Image">
+					<span>2)вставляємо в каністру</span>
+					<img src="img/too.webp" alt="Image">
+					<span>3)вибираємо вид топлива та тиснемо "Заправити"</span>
+					<img src="img/three.webp" alt="Image">
+				</div>
+			</div>
+			<div id="container">
+				<svg id="hose" xmlns="http://www.w3.org/2000/svg">
+					<path id="hose-path" d="M 130,100 Q 100,100 100,100" stroke="black" stroke-width="5" fill="none" />
+				</svg>
+				<div id="nozzle">
+					<div id="sensor"></div>
+				</div>
+				<div id="canister">
+
+					<div id="fuel" class=""></div>
+				</div>
+			</div>
+			<div class="controls">
+				<p>Тип бензину:</p>
+				<button class="gas" data-price='4.50 '>A-92 <br><br> 4.50 </button>
+				<button class="gas" data-price="4.90">A-95 <br><br>4.90</button>
+				<button class="gas" data-price="5.30">A-98 <br><br>5.30</button>
+				<button id="start-stop">Заправити</button>
+				<p>Літри: <span id="liters">0 </span></p>
+				<p>Ціна:&nbsp;&nbsp; <span id="total-price">0</span> </p>
+				<div>
+
+				</div>
+			</div>
+		</main>
+
+
+		<footer class="footer">
+			<div class="footer__container">
+			</div>
+		</footer>
+	</div>
+	<script src="js/app.min.js?_v=20240524145244"></script>
+</body>
+
+</html>
