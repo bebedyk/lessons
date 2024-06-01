@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>HomePage</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20240601161416">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+			</div>
+		</header>
+		<main class="page">
+			<div class="page__container">
+				<div class="text-win"> 0-1499 Poins-Loser <br> 1500-3000 Poins-Jackpot </div>
+				<div class="pachinko-board" id="pachinkoBoard">
+
+					<div class="moving-block" id="movingBlock"></div>
+					<div class="ball" id="ball"></div>
+					<div class="point-case">
+						<div class="case"></div>
+						<div class="case"></div>
+						<div class="case"></div>
+						<div class="case"></div>
+						<div class="case"></div>
+						<div class="case"></div>
+						<div class="case"></div>
+					</div>
+				</div>
+				<div class="wrap-table">
+					<button class="button" id="dropBallButton">
+						<div id="msg">START GAME</div>
+					</button>
+					<div class="prize-display" id="prizeDisplay">Points :</div>
+				</div>
+				<audio id="jackpotSound" src="img/track4.mp4"></audio>
+				<audio id="ballSound" src="img/music-boss.mp4"></audio>
+				<audio id="pointSound" src="img/track4.mp4"></audio>
+				<audio id="shortSound" src="img/lose.mp3"></audio>
+			</div>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+			</div>
+		</footer>
+	</div>
+
+	<script src="js/app.min.js?_v=20240601161416"></script>
+</body>
+
+</html>
