@@ -1,0 +1,210 @@
+@import url(../fonts/font.css);
+@import url(reset.css);
+@import url(https://fonts.googleapis.com/css?family=EB+Garamond:regular,500,600,700,800,italic,500italic,600italic,700italic,800italic);
+.wrapper > main {
+	-webkit-box-flex: 1;
+		-ms-flex-positive: 1;
+			flex-grow: 1;
+  }
+
+body {
+    background-color: #ffffff;
+    overflow: auto; /* Прибираємо стандартний скрол */
+   
+  
+}
+.wrapper {
+	min-height: 100%;
+	overflow: clip;
+	width: 100%;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+		-ms-flex-direction: column;
+			flex-direction: column;
+  }
+.box-img {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+	overflow: hidden;
+}
+
+.box-img img, .box-img video {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transition: transform 0.3s ease-out;
+	will-change: transform;
+}
+
+/* Верхній шар (тунель) */
+.wan {
+    z-index: 2;
+	
+}
+
+/* Основне зображення (пейзаж) */
+.too {
+	position: absolute;
+    z-index: 1;
+	will-change: transform;
+
+	
+}
+
+.scroll-indicator {
+    position: absolute;
+   bottom: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    z-index: 100;
+}
+
+.scroll-wheel {
+    width: 50px;
+    height: 80px;
+    border: 5px solid rgb(255, 255, 255);
+    border-radius: 30% 30% 50% 50%;
+    display: inline-block;
+    position: relative;
+    margin-bottom: 10px;
+    animation: blink 1s infinite; /* Миготіння */
+	
+}
+
+.scroll-wheel::before {
+    content: '';
+    position: absolute;
+    width: 18px;
+    height: 5px;
+    background: white;
+    top: 20% !important;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(90deg);
+    animation: bounce 1s infinite; /* Ефект руху */
+	border-radius: 40%;
+}
+
+p {
+    margin-top: 10px;
+}
+
+
+
+/* Анімація для руху коліщатка */
+@keyframes bounce {
+    0%, 100% {
+        top: 50%;
+    }
+    50% {
+		background: rgb(25, 0, 255);
+        top: 45%;
+    }
+}
+
+.title{
+	pointer-events: none;
+	text-shadow: 1px 2px 1px rgba(56, 234, 86, 0.765),  
+	5px 5px 1px rgba(28, 28, 28, 0.434);  
+	text-align: center;
+	top: 40%;
+	left: 50%;
+    transform: translate(-50%, -50%);
+	z-index: 4;
+	position: absolute;
+	background-image: url(../img/6b0f19174a89fbe967cbdec6a285344a.gif);
+	background-size: cover;
+	color: transparent;
+	-moz-background-clip: text;
+	-webkit-background-clip: text;
+	text-transform: uppercase;
+	font-size: 130px;
+	margin: 10px 0;
+	font-weight: 700;
+	font-family: "EB Garamond";
+	color: rgba(0, 0, 0, 0.358);
+	transition: filter 0.5s ease, opacity 0.3s ease;
+}
+
+.libe{
+	color:rgba(202, 16, 16, 0.712);
+	font-size: 100px;
+	width: 100%;
+	display: inline-block;
+	text-align: center;
+}
+
+.wan, .too, .title {
+    will-change: transform, filter, opacity;
+}
+
+.thre {
+	z-index: 3;
+	display: none;
+	position: absolute;
+	width: 50% !important;
+	height: 50%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) scale(0);
+	opacity: 0;
+	transition: transform 2s ease-out, opacity 1.5s ease-out !important;
+	border-radius: 50%;
+	object-fit: cover;
+}
+
+
+.animated-text {
+	
+	
+	
+	
+	
+	font-weight: bold;
+	
+	opacity: 0;
+	text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+	
+	z-index: 4 ;
+
+
+	pointer-events: none;
+	text-shadow: 1px 2px 1px rgba(255, 0, 0, 0.614),  
+	5px 5px 1px rgba(28, 28, 28, 0.434);  
+	text-align: center;
+	top: 47%;
+	left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+	z-index: 4;
+	position: absolute;
+	background-image: url(../img/6b0f19174a89fbe967cbdec6a285344a.gif);
+	background-size: cover;
+	color: transparent;
+	-moz-background-clip: text;
+	-webkit-background-clip: text;
+	text-transform: uppercase;
+	font-size: 85px;
+	margin: 10px 0;
+	font-weight: 700;
+	font-family: "EB Garamond";
+	color: rgba(0, 0, 0, 0.358);
+	transition: filter 3s ease, opacity 1.7s ease;
+}
+
+
+
+@keyframes pulse {
+	0% { transform: translate(-50%, -50%) scale(1); }
+	50% { transform: translate(-50%, -50%) scale(1.15); }
+	100% { transform: translate(-50%, -50%) scale(1); }
+}
+.pulse {
+	animation: pulse 1.5s infinite ease-in-out;
+}
